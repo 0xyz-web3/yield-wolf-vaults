@@ -1,0 +1,47 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.5.0
+  - Uniswap/v2-core@1.0.1
+  - Uniswap/v2-periphery@1.0.0-beta.0
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.5.0'
+      - '@uniswap/v2-core=Uniswap/v2-core@1.0.1'
+      - '@uniswap/v2-periphery=Uniswap/v2-periphery@1.0.0-beta.0'
+dotenv: .env
+networks:
+  development:
+    verify: False
+  ganache:
+    verify: False
+  kovan:
+    verify: True
+    weth_token: '0xd0A1E359811322d97991E03f863a0C30C2cF029C'
+    fau_token: '0xFab46E002BbF0b4509813474841E0716E6730136'
+    dai_usd_price_feed: '0x777A68032a88E5A84678A77Af2CD65A7b3c0775a'
+    eth_usd_price_feed: '0x9326BFA02ADD2366b30bacB125260Af641031331'
+  fantom-fork:
+    verify: False
+  ftm-mainnet-fork:
+    wftm: '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83'
+    tomb: '0x6c021Ae822BEa943b2E66552bDe1D2696a53fbB7'
+    solidex: '0xD31Fcd1f7Ba190dBc75354046F6024A9b86014d7'
+    spookyswap_router: '0xF491e7B69E4244ad4002BC14e878a34207E38c29'
+    solidly_router: '0xa38cd27185a464914D3046f0AB9d43356B34829D'
+    wftm_tomb_spookyswap_pair: '0x2A651563C9d3Af67aE0388a5c8F89b867038089e'
+    wftm_tomb_solidly_volatile_pair: '0x60a861Cd30778678E3d613db96139440Bd333143'
+    wftm_solidex_solidly_volatile_pair: '0xFCEC86aF8774d69e2e4412B8De3f4aBf1f671ecC'
+    master_chef_solidex: '0x26E1A0d851CF28E697870e1b7F053B605C8b060F'
+  ftm-main-fork:
+    wftm: '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83'
+    tomb: '0x6c021Ae822BEa943b2E66552bDe1D2696a53fbB7'
+    solidex: '0xD31Fcd1f7Ba190dBc75354046F6024A9b86014d7'
+    spookyswap_router: '0xF491e7B69E4244ad4002BC14e878a34207E38c29'
+    solidly_router: '0xa38cd27185a464914D3046f0AB9d43356B34829D'
+    wftm_tomb_spookyswap_pair: '0x2A651563C9d3Af67aE0388a5c8F89b867038089e'
+    yieldwolf_vault: '0x876F890135091381c23Be437fA1cec2251B7c117'
+    wftm_tomb_solidly_volatile_pair: '0x60a861Cd30778678E3d613db96139440Bd333143'
+    wftm_solidex_solidly_volatile_pair: '0xFCEC86aF8774d69e2e4412B8De3f4aBf1f671ecC'
+    master_chef_solidex: '0x26E1A0d851CF28E697870e1b7F053B605C8b060F'
+wallets:
+  from_key: ${PRIVATE_KEY}
